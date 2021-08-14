@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splash_nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.richieoscar.reechhomes.views.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_onboarding"
+            app:destination="@id/onboarding"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/screenOne"
+        android:name="com.richieoscar.reechhomes.onbaording.ScreenOne"
+        android:label="fragment_screen_one"
+        tools:layout="@layout/fragment_screen_one" />
+    <fragment
+        android:id="@+id/onboarding"
+        android:name="com.richieoscar.reechhomes.onbaording.Onboarding"
+        android:label="fragment_onboarding"
+        tools:layout="@layout/fragment_onboarding" >
+        <action
+            android:id="@+id/action_onboarding_to_loginFragment2"
+            app:destination="@id/loginFragment2"
+            app:enterAnim="@android:anim/fade_in"
+            app:popUpTo="@id/onboarding"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/screenTwo"
+        android:name="com.richieoscar.reechhomes.onbaording.ScreenTwo"
+        android:label="fragment_screen_two"
+        tools:layout="@layout/fragment_screen_two" />
+    <fragment
+        android:id="@+id/screenThree"
+        android:name="com.richieoscar.reechhomes.onbaording.ScreenThree"
+        android:label="fragment_screen_three"
+        tools:layout="@layout/fragment_screen_three" />
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.richieoscar.reechhomes.views.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+</navigation>
